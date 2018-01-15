@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+    setzer:
+        build: ./setzer
+        command: bot --auto
+        volumes:
+            - ./secrets/pass:/tmp/passwords/pass
+            - ./secrets/keys:/root/.local/share/io.parity.ethereum/keys
+        networks:
+            - ethereum
+        environment:
+            - ETH_FROM
+            - ETH_RPC_URL
+            - ETH_KEYSTORE
+            - ETH_PASSWORD
+            - SETZER_FEED
+            - SETZER_MEDIANIZER
+            - SETZER_SOURCES
+
+    parity:
+        image: parity/parity:v1.8.6
+        command: |
+            --config config.toml
+            --no-persistent-txqueue
+            --unlock ${ETH_FROM}
+            --password /tmp/passwords/pass
+        working_dir: /root/.local/share/io.parity.ethereum/
+        ports:
+            - 8545
+            - 30303:30303
+            - 30303:30303/udp
+        volumes:
+            - ./secrets/pass:/tmp/passwords/pass
+            - ./secrets/keys:/root/.local/share/io.parity.ethereum/keys
+            - ./parity/data:/root/.local/share/io.parity.ethereum
+        networks:
+            - ethereum
+
+networks:
+    ethereum:

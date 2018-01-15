@@ -1,0 +1,20 @@
+[ui]
+disable = true
+
+[rpc]
+interface = "all"
+
+[network]
+warp = true
+
+[websockets]
+disable = true
+
+[ipc]
+disable = true
+
+[dapps]
+disable = true
+
+[footprint]
+cache_size = 2048
