@@ -20,6 +20,8 @@ Note that the `docker-compose.yml` file expects your keystore folder to be `./se
 | **SETZER_MEDIANIZER** | 0x729D19f657BD0614b4985Cf1D82531c67569197B | 
 | **SETZER_SOURCES**    | Your choice of price feeds. See choices by running `docker-compose run setzer price ls` |
 
+⚠️ Ensure that your `ETH_KEYSTORE` and `ETH_PASSWORD` values are **_not_** wrapped in quotes.
+
 ### Deploying your price feed
 
 Next, use `seth` to deploy your price feed. It will respond with an address that represents your price feed address.
