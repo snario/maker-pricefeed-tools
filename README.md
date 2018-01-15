@@ -8,6 +8,8 @@ This repo contains tools that are useful for running a Maker price feed using [`
 
 Rename `defaults.env` to `.env` and begin to set the variables for each of the below (note [`.env`](https://docs.docker.com/compose/environment-variables/#the-env-file) is a specifically recognized filename by `docker-compose`).
 
+Note that the `docker-compose.yml` file expects your keystore folder to be `./secrets/keys/ethereum` and your password file to be `./secrets/pass`.
+
 | Variable          | Value         |
 | ----------------- | ------------- |
 | **ETH_FROM**          | The public key you'll be using to sign price feed updates
