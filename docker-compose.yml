@@ -34,7 +34,7 @@ services:
         volumes:
             - ./secrets/pass:/tmp/passwords/pass
             - ./secrets/keys:/root/.local/share/io.parity.ethereum/keys
-            - ./parity/data:/root/.local/share/io.parity.ethereum
+            - ./parity/data/chains:/root/.local/share/io.parity.ethereum/chains
         networks:
             - ethereum
 
