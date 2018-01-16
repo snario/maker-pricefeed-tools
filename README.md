@@ -19,6 +19,8 @@ Note that the `docker-compose.yml` file expects your keystore folder to be `./se
 | **SETZER_FEED**       | The feed address you will get from following steps in the next section. |
 | **SETZER_MEDIANIZER** | 0x729D19f657BD0614b4985Cf1D82531c67569197B | 
 | **SETZER_SOURCES**    | Your choice of price feeds. See choices by running `docker-compose run setzer price ls` |
+| **SETZER_MAX_GAS_PRICE** | 350000000000 |
+| **SETZER_INTERVAL_SECONDS** | 120 |
 
 ⚠️ Ensure that your `ETH_KEYSTORE` and `ETH_PASSWORD` values are **_not_** wrapped in quotes.
 
