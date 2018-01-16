@@ -18,6 +18,8 @@ services:
             - SETZER_FEED
             - SETZER_MEDIANIZER
             - SETZER_SOURCES
+            - SETZER_INTERVAL_SECONDS
+            - SETZER_MAX_GAS_PRICE
 
     parity:
         image: parity/parity:v1.8.6
